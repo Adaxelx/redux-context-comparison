@@ -10,9 +10,11 @@ import { changeValue } from "../../store/reducer";
 
 function HeaderRedux() {
   const id = React.useId();
-  const isMuted = useSelector((state) => state.slice);
+  const isMuted = useSelector((state) => state.slice.value);
 
   const dispatch = useDispatch();
+
+  console.log(isMuted);
 
   return (
     <header className={styles.wrapper}>
@@ -21,7 +23,7 @@ function HeaderRedux() {
 
         <button
           onClick={() => {
-            dispatch(changeValue);
+            dispatch(changeValue());
           }}
         >
           {!isMuted ? <Volume2 /> : <VolumeX />}

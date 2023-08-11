@@ -7,7 +7,7 @@ import { useSelector } from "react-redux";
 const SOUND_SRC = "/909-drums.mp3";
 
 function DrumMachine() {
-  const isMuted = useSelector((state) => state.slice);
+  const isMuted = useSelector((state) => state.slice.value);
 
   const [play] = useSound(SOUND_SRC, {
     sprite: {
