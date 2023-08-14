@@ -1,12 +1,14 @@
-"use client";
 import React, { useContext } from "react";
 
 const SoundContext = React.createContext();
 
 function SoundContextProvider({ children }) {
   const [isMuted, setIsMuted] = React.useState(false);
+  const [dummyValue, setDummyValue] = React.useState(0);
   return (
-    <SoundContext.Provider value={{ isMuted, setIsMuted }}>
+    <SoundContext.Provider
+      value={{ isMuted, setIsMuted, dummyValue, setDummyValue }}
+    >
       {children}
     </SoundContext.Provider>
   );

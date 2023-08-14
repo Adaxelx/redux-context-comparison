@@ -1,5 +1,3 @@
-"use client";
-import React from "react";
 import { Volume2, VolumeX } from "react-feather";
 
 import VisuallyHidden from "../VisuallyHidden";
@@ -8,8 +6,6 @@ import styles from "./Header.module.css";
 import { useSoundContext } from "../SoundContext/SoundContext";
 
 function Header() {
-  const id = React.useId();
-
   const { isMuted, setIsMuted } = useSoundContext();
 
   return (

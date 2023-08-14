@@ -9,12 +9,9 @@ import { useDispatch, useSelector } from "react-redux";
 import { changeValue } from "../../store/reducer";
 
 function HeaderRedux() {
-  const id = React.useId();
   const isMuted = useSelector((state) => state.slice.value);
 
   const dispatch = useDispatch();
-
-  console.log(isMuted);
 
   return (
     <header className={styles.wrapper}>
