@@ -1,6 +1,8 @@
 import "./App.css";
 import Header from "./components/Header";
 import HeaderRedux from "./components/Header/HeaderRedux";
+import DummyComp from "./components/DummyComp/DummyComp";
+import DummyCompRedux from "./components/DummyComp/DummyCompRedux";
 
 import SoundContextProvider from "./components/SoundContext/SoundContext";
 import { Home } from "./page";
@@ -14,10 +16,12 @@ function App() {
     <>
       <Provider store={store}>
         <HeaderRedux />
+        <DummyCompRedux />
         <HomeRedux />
       </Provider>
       <SoundContextProvider>
         <Header />
+        <DummyComp />
         <Home />
       </SoundContextProvider>
     </>
